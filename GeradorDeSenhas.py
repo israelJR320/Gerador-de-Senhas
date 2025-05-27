@@ -1,7 +1,8 @@
 '''
 gerar senhas automaticas. Deve ter letras maiusculas, minusculas, caracteris especiais e números
 com escolha do usuário para enserir uma palavra ou mais para gerar em cima desse
-e escolha da quantidade de caracteis sendo no mínimo 8, 12, 14 ou 16
+e escolha da quantidade de caracteis sendo no mínimo 8, 12, 14 ou 16 
+Israel
 
 '''
 import random
