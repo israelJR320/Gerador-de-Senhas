@@ -11,9 +11,9 @@ import datetime
 print('\n')
 print('-*-' * 5,'Gerador De Senhas', 5 * '-*-')
 nome = str(input('Digite seu nome: '))
-nascimento = datetime.date(str(input('Digite sua data de nascimento: ')))
+nascimento = input('Digite sua data de nascimento (DD/MM/AAAA): ')
+nascimento = datetime.datetime.strptime(nascimento, "%d/%m/%Y")
 nascfor = nascimento.strftime("%d de %B de %Y")
-print(nascfor)
 print('Escolha a opção desejada: 1- Gerar senha automatica ou 2- Inserir palavra(s)')
 opçao = int(input('Qual opção: '))
 #caracteres = string.ascii_letters + string.digits + string.punctuation
@@ -49,8 +49,9 @@ if opçao == 1:
         print('Opção invalida! Escolha um número entre 1 e 4')
 elif opçao == 2 :
     print('Atenção!!! Evitar informações pessoais: Não use seu nome, data de nascimento ou palavras comuns. ')
-    palavra = str(input('Insira a palavra(s) desejada(s): ')).lower().replace(" ", "")
+    palavra = str(input('Insira as palavra(s) desejada(s): ')).lower().replace(" ", "")
     caracteres2 = palavra + palavra.upper() + '0123456789!@#$%&'
+if palavra != nome:
     print('Escolha a opção desejada de quantidade de caracteres: 1- 8 ; 2- 12 ; 3- 14 ou 4- 16')
     qtdd = int(input('Qual a opção: '))
     if qtdd == 1 :
@@ -79,3 +80,5 @@ elif opçao == 2 :
         print(f'Senha: {qtdd4_juncao}')
     else:
         print('Opção invalida! Escolha um número entre 1 e 4')
+else:
+    print('A palavra inserida não pode ser igual ao seu nome, tente novamente!')
