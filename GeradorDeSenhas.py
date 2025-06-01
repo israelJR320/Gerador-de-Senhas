@@ -11,7 +11,7 @@ while mestre != 'N':
         [1] gerar uma senha nova 
         [2] consultar uma senha criada
         [3] criptografar senhas salvas
-        [4] descriptografar as senhas e pesuisar 
+        [4] descriptografar as senhas e pesquisar 
     ''')
     senhamestre = int(input('O que você deseja: '))
     if senhamestre == 1:
@@ -151,5 +151,5 @@ while mestre != 'N':
                 print(f'Nome "{nomeproc1}" não encontrado no arquivo. Tente outro!')
     else:
         print('Opção invalida!')
-    mestre = str(input('Deseja continuar [S/N]? ')).upper()
+    mestre = str(input('Deseja voltar ao menu inicial [S/N]? ')).upper()
 print('Operação finalizada!')
